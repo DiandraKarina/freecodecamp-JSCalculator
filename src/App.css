@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+    background-image: linear-gradient( to bottom right, rgb(119, 102, 181),rgb(220, 133, 196));
+}
+
+.container {
+  
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+.calculator {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000;
+}
+
+#display {
+    margin: 0 10px;
+    height: 150px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
+    
+   
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  #buttons{
+    width: 320px;
   }
-  to {
-    transform: rotate(360deg);
+
+  #buttons .rows{
+    display: table-row;
+    justify-content: space-between;
+   
   }
+
+button {
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+    box-shadow: 0 0 3px #3e024a;
+}
+
+button:hover {
+    transform: scale(1.1);
+    color:rgb(198, 34, 165);
+}
+
+#equals{
+    height: 130px;
+    position: fixed;
+    background-color: #fbd5ff;
+    color: #dd45fc;
+    border: 1px solid #580468;
+    box-shadow: 0 0 10px #3e024a;
+}
+
+#zero{
+    width: 130px;
+    display: table-row;
+}
+
+
+#clear {
+    width: 130px;
+    background-color: #fbd5ff;
+    color: #dd45fc;
+    border: 1px solid #580468;
+    box-shadow: 0 0 10px #3e024a;
+}
+
+#previous-number{
+    color: rgba(255, 255, 255, 0.751);
+    font-size: 1.5rem;
+}
+
+#current-number{
+    color: white;
+    font-size: 2rem;
 }
